@@ -19,7 +19,8 @@ const Home = () => {
   };
 
   const handleRemoveItem = (tshirt) => {
-    console.log(tshirt.name);
+    const removeItem = cart.filter((item) => item._id !== tshirt._id);
+    setCart(removeItem);
   };
   return (
     <div className="home-container">
