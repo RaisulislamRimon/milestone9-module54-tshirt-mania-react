@@ -6,7 +6,10 @@ const Cart = ({ cart }) => {
       <h2>Order Summary</h2>
       <h5>Order Quantity : {cart.length}</h5>
       {cart.map((tshirt) => (
-        <p key={tshirt._id}>{tshirt.name}</p>
+        <p key={tshirt._id}>
+          {tshirt.name}
+          <button>X</button>
+        </p>
       ))}
     </div>
   );
