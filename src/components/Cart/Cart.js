@@ -4,6 +4,10 @@ const Cart = ({ cart, handleRemoveItem }) => {
   let message;
   if (cart.length === 0) {
     message = <p> Please, buy at least one item!!! </p>;
+  } else if (cart.length === 1) {
+    message = <h4>Great Choice</h4>;
+  } else {
+    message = <p>Thanks for buying!</p>;
   }
   return (
     <div>
