@@ -29,7 +29,7 @@ const Grandpa = () => {
 
 export default Grandpa; */
 
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import "./Grandpa.css";
 import Aunty from "../Aunty/Aunty";
 import Father from "../Father/Father";
@@ -38,10 +38,13 @@ import Uncle from "../Uncle/Uncle";
 export const RingContext = createContext("Matir Ring");
 
 const Grandpa = () => {
-  const house = 7;
+  //   const house = 7;
+  const [house, setHouse] = useState(1);
+
   const ring = "diamond";
   return (
-    <RingContext.Provider value={ring}>
+    // <RingContext.Provider value={ring}>
+    <RingContext.Provider value={[house, setHouse]}>
       <div className="grandpa">
         <h1>Grandpa</h1>
         <p>House : {house}</p>
