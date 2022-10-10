@@ -9,6 +9,7 @@ const Friend = () => {
       <p>
         House : {house}
         <button onClick={() => setHouse(house + 1)}>Increase</button>
+        <button onClick={() => setHouse(house - 1)}>Decrease</button>
       </p>
     </div>
   );
