@@ -35,21 +35,23 @@ import Aunty from "../Aunty/Aunty";
 import Father from "../Father/Father";
 import Uncle from "../Uncle/Uncle";
 
-const RingContext = createContext("Matir Ring");
+export const RingContext = createContext("Matir Ring");
 
 const Grandpa = () => {
   const house = 7;
   const ring = "diamond";
   return (
-    <div className="grandpa">
-      <h1>Grandpa</h1>
-      <p>House : {house}</p>
-      <section className="flex">
-        <Father house={house} ring={ring}></Father>
-        <Uncle house={house}></Uncle>
-        <Aunty house={house}></Aunty>
-      </section>
-    </div>
+    <RingContext.Provider value={ring}>
+      <div className="grandpa">
+        <h1>Grandpa</h1>
+        <p>House : {house}</p>
+        <section className="flex">
+          <Father house={house} ring={ring}></Father>
+          <Uncle house={house}></Uncle>
+          <Aunty house={house}></Aunty>
+        </section>
+      </div>
+    </RingContext.Provider>
   );
 };
 
