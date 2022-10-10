@@ -1,9 +1,10 @@
 import React from "react";
 
-const Special = () => {
+const Special = ({ ring }) => {
   return (
     <div>
       <h1>Special</h1>
+      <p>Gift : {ring}</p>
     </div>
   );
 };

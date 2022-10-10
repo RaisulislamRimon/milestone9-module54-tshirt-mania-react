@@ -37,12 +37,13 @@ import Uncle from "../Uncle/Uncle";
 
 const Grandpa = () => {
   const house = 7;
+  const ring = "diamond";
   return (
     <div className="grandpa">
       <h1>Grandpa</h1>
       <p>House : {house}</p>
       <section className="flex">
-        <Father house={house}></Father>
+        <Father house={house} ring={ring}></Father>
         <Uncle house={house}></Uncle>
         <Aunty house={house}></Aunty>
       </section>
