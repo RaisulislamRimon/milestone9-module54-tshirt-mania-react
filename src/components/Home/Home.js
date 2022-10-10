@@ -19,8 +19,8 @@ const Home = () => {
   };
 
   const handleRemoveItem = (tshirt) => {
-    const removeItem = cart.filter((item) => item._id !== tshirt._id);
-    setCart(removeItem);
+    const remaining = cart.filter((ts) => ts._id !== tshirt._id);
+    setCart(remaining);
   };
   return (
     <div className="home-container">
