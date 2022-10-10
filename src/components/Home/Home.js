@@ -8,7 +8,7 @@ const Home = () => {
   const tshirts = useLoaderData();
   const [cart, setCart] = useState([]);
   const handleAddToCart = (tshirt) => {
-    console.log(tshirt);
+    // console.log(tshirt);
     const exists = cart.find((ts) => ts._id === tshirt._id);
     if (exists) {
       alert("t-shirt already added");
@@ -16,6 +16,10 @@ const Home = () => {
       const newCart = [...cart, tshirt];
       setCart(newCart);
     }
+  };
+
+  const handleRemoveItem = (tshirt) => {
+    console.log(tshirt.name);
   };
   return (
     <div className="home-container">
@@ -29,7 +33,7 @@ const Home = () => {
         ))}
       </div>
       <div className="cart-container">
-        <Cart cart={cart}></Cart>
+        <Cart cart={cart} handleRemoveItem={handleRemoveItem}></Cart>
       </div>
     </div>
   );
