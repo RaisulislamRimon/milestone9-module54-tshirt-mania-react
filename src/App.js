@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./components/About/About";
 import Home from "./components/Home/Home";
@@ -22,7 +23,7 @@ const App = () => {
     },
   ]);
   return (
-    <div>
+    <div className="App">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
