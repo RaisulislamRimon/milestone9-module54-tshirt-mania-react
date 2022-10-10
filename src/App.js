@@ -11,7 +11,13 @@ const App = () => {
       path: "/",
       element: <Main></Main>,
       children: [
-        { path: "/", element: <Home></Home> },
+        {
+          path: "/",
+          loader: async () => {
+            return fetch("tshirts.json");
+          },
+          element: <Home></Home>,
+        },
         { path: "/orders", element: <Orders></Orders> },
         { path: "/about", element: <About></About> },
       ],
