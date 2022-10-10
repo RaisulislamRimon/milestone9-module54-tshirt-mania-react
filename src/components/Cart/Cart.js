@@ -20,6 +20,7 @@ const Cart = ({ cart, handleRemoveItem }) => {
           <button onClick={() => handleRemoveItem(tshirt)}>X</button>
         </div>
       ))}
+      {cart.length === 3 ? "Wow! Have a nice day!!!" : "Wow"}
     </div>
   );
 };
