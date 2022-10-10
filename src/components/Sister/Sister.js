@@ -3,6 +3,7 @@ import { MoneyContext } from "../Grandpa/Grandpa";
 
 const Sister = ({ house }) => {
   const money = useContext(MoneyContext);
+  //   const [money, setMoney] = useContext(MoneyContext);
   return (
     <div>
       <h1>Sister</h1>
