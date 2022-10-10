@@ -29,11 +29,13 @@ const Grandpa = () => {
 
 export default Grandpa; */
 
-import React from "react";
+import React, { createContext } from "react";
 import "./Grandpa.css";
 import Aunty from "../Aunty/Aunty";
 import Father from "../Father/Father";
 import Uncle from "../Uncle/Uncle";
+
+const RingContext = createContext("Matir Ring");
 
 const Grandpa = () => {
   const house = 7;
