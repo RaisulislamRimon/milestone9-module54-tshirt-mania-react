@@ -9,7 +9,7 @@ const Home = () => {
   const [cart, setCart] = useState([]);
   const handleAddToCart = (tshirt) => {
     console.log(tshirt);
-    const exists = cart.find((ts) => ts === tshirt);
+    const exists = cart.find((ts) => ts._id === tshirt._id);
     if (exists) {
       alert("t-shirt already added");
     } else {
