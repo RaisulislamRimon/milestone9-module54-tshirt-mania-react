@@ -1,10 +1,15 @@
 import React from "react";
 
 const Cart = ({ cart, handleRemoveItem }) => {
+  let message;
+  if (cart.length === 0) {
+    message = <p> Please, buy at least one item!!! </p>;
+  }
   return (
     <div>
       <h2>Order Summary</h2>
       <h5>Order Quantity : {cart.length}</h5>
+      <p>{message}</p>
       {cart.map((tshirt) => (
         <div key={tshirt._id}>
           <span>{tshirt.name}</span>
